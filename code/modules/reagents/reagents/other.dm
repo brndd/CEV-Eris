@@ -188,7 +188,7 @@
 				new /obj/effect/decal/cleanable/greenglow(T)
 			return TRUE
 	return TRUE
-	
+
 
 /datum/reagent/adrenaline
 	name = "Adrenaline"
@@ -444,7 +444,7 @@
 					R.metabolism = initial(R.metabolism)
 					break
 
-/datum/reagent/other/arectine 
+/datum/reagent/other/arectine
 	name = "Arectine"
 	id = "arectine"
 	description = "Makes user emit light."
@@ -480,4 +480,29 @@
 	taste_description = "vomit"
 	reagent_state = LIQUID
 	color = "#527f4f"
+
+/datum/reagent/other/liquid_armor
+	name = "Aper liquid armor"
+	id = "aper_armor"
+	taste_description = "blood"
+	reagent_state = LIQUID
+	color = "#224499"
+
+/datum/reagent/other/liquid_armor/affect_blood(var/mob/living/carbon/M)
+
+	// 1. It can be used for armor repairing
+	for(var/obj/item/organ/O in M.organs)
+		if(istype(O.module, 
+
+	var/obj/item/organ/Organ = pick(M.organs)
+
+	var/obj/item/weapon/material/shard/shrapnel/SP = new()
+	SP.name = (P.name != "shrapnel")? "[P.name] shrapnel" : "shrapnel"
+	SP.desc = "[SP.desc] It looks like it was fired from [P.shot_from]."
+	SP.loc = organ
+	organ.embed(SP)
+
+
+
+
 

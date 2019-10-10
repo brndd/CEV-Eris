@@ -28,7 +28,7 @@
 
 /datum/design/research/item/mechfab/modules/armor
 	name = "subdermal body armor"
-	build_path = /obj/item/organ_module/armor
+	build_path = /obj/item/organ_module/armor/passive
 
 /datum/design/research/item/mechfab/modules/armblade
 	name = "Embedded armblade"
