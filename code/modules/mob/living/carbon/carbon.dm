@@ -260,6 +260,7 @@
 					M.fire_stacks -= 1
 				if(M.on_fire)
 					src.IgniteMob()
+				reagents.add_reagent("paracetamol", 0.1)
 			AdjustParalysis(-3)
 			AdjustStunned(-3)
 			AdjustWeakened(-3)
